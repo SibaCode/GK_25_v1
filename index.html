@@ -387,20 +387,20 @@
         <section class="section">
           <div class="row ">
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
+              <div class="card card-info">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15">New Booking</h5>
-                          <h2 class="mb-3 font-18">258</h2>
+                          <h5 class="font-15">Fraud Reports</h5>
+                          <h2 id="totalFraud" class="mb-3 font-18">0</h2>
                           <p class="mb-0"><span class="col-green">10%</span> Increase</p>
-                        </div>
+                      </div>
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                         <div class="banner-img">
-                          <img src="assets/img/banner/1.png" alt="">
+                          <!-- <img src="assets/img/banner/1.png" alt=""> -->
                         </div>
                       </div>
                     </div>
@@ -409,22 +409,22 @@
               </div>
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
+              <div class="card card-info">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15"> Customers</h5>
-                          <h2 class="mb-3 font-18">1,287</h2>
+                          <h5 class="font-15"> E-Waste Collected</h5>
+                          <h2 class="mb-3 font-18" id="totalEWaste" >0</h2>
                           <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
                         </div>
                       </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                      <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                         <div class="banner-img">
                           <img src="assets/img/banner/2.png" alt="">
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -437,39 +437,39 @@
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15">New Project</h5>
-                          <h2 class="mb-3 font-18">128</h2>
+                          <h5 class="font-15">Training Progress</h5>
+                          <h2 class="mb-3 font-18" id="totalTraining">0</h2>
                           <p class="mb-0"><span class="col-green">18%</span>
                             Increase</p>
                         </div>
                       </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                      <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                         <div class="banner-img">
                           <img src="assets/img/banner/3.png" alt="">
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-              <div class="card">
+              <div class="card card-info">
                 <div class="card-statistic-4">
                   <div class="align-items-center justify-content-between">
                     <div class="row ">
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                         <div class="card-content">
-                          <h5 class="font-15">Revenue</h5>
-                          <h2 class="mb-3 font-18">$48,697</h2>
-                          <p class="mb-0"><span class="col-green">42%</span> Increase</p>
+                          <h5 class="font-15">Community Messages</h5>
+                          <h2 class="mb-3 font-18" id="totalCommunity" >0</h2>
+                          <p class="mb-0"><span class="col-green">0</span> Increase</p>
                         </div>
                       </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
+                      <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                         <div class="banner-img">
                           <img src="assets/img/banner/4.png" alt="">
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -478,7 +478,7 @@
           </div>
           <div class="row">
             <div class="col-12 col-sm-12 col-lg-12">
-              <div class="card ">
+              <div class="card card-info">
                 <div class="card-header">
                   <h4>Revenue chart</h4>
                   <div class="card-header-action">
@@ -1114,147 +1114,94 @@
   <!-- Custom JS File -->
   <script src="assets/js/custom.js"></script>
   <script>
-    // ===== Mock Data =====
-    let distributors = [
-      { id: 1, name: "Distributor1", fraudCount: 2, eWasteCount: 3, totalReward: 50, badges: ["Fraud Fighter","Eco Champion"] },
-      { id: 2, name: "Distributor2", fraudCount: 1, eWasteCount: 1, totalReward: 10, badges: ["Eco Champion"] }
-    ];
-    
-    let fraudReports = [
-      { id: 1, distributorId: 1, customerName: "John Doe", simNumber: "0812345678", description: "SIM card used in scam call", timestamp: "2025-09-24 10:00" },
-      { id: 2, distributorId: 1, customerName: "Alice Brown", simNumber: "0823456789", description: "Unauthorized duplication of SIM", timestamp: "2025-09-24 10:30" },
-      { id: 3, distributorId: 2, customerName: "Mark Green", simNumber: "0834567890", description: "Fake SIM registered", timestamp: "2025-09-24 11:00" }
-    ];
-    
-    let eWasteLogs = [
-      { id: 1, distributorId: 1, customerName: "Jane 4444444Smith", itemsCollected: "Old SIMs, Phone", weight: 2.5, reward: 25, timestamp: "2025-09-24 11:00" },
-      { id: 2, distributorId: 1, customerName: "Tom White", itemsCollected: "Old Router", weight: 1.5, reward: 15, timestamp: "2025-09-24 11:30" },
-      { id: 3, distributorId: 2, customerName: "Linda Grey", itemsCollected: "Old SIMs", weight: 1, reward: 10, timestamp: "2025-09-24 12:00" }
-    ];
-    
-    let courses = [
-      { id: 1, name: "Fraud Prevention", description: "Learn to detect SIM fraud" },
-      { id: 2, name: "Customer Service", description: "Tips for excellent customer service" },
-      { id: 3, name: "Sustainability Practices", description: "E-waste management & recycling" }
-    ];
-    
-    let distributorCourses = [
-      { distributorId: 1, courseId: 1, completedAt: "2025-09-24 12:00" },
-      { distributorId: 1, courseId: 3, completedAt: "2025-09-24 12:30" },
-      { distributorId: 2, courseId: 3, completedAt: "2025-09-24 12:45" }
-    ];
-    
-    let communityPosts = [
-      { id: 1, distributorId: 1, title: "SIM Scam Advice", content: "How to detect duplicate SIM calls", timestamp: "2025-09-24 13:00" },
-      { id: 2, distributorId: 2, title: "E-Waste Tips", content: "Best way to weigh and track old SIMs", timestamp: "2025-09-24 13:30" }
-    ];
-    
-    // ===== UI Update Functions =====
-    function updateDashboard() {
-      let totalFraud = fraudReports.length;
-      let totalEWaste = eWasteLogs.length;
-      let totalReward = distributors.reduce((sum, d) => sum + d.totalReward, 0);
-      document.getElementById("totalFraud").innerText = totalFraud;
-      document.getElementById("totalEWaste").innerText = totalEWaste;
-      document.getElementById("totalReward").innerText = totalReward.toFixed(2);
-    }
-    
-    function updateFraudList() {
-      const list = document.getElementById("fraudList");
-      list.innerHTML = "<h6>Submitted Fraud Reports:</h6>";
-      const keywords = ["scam","duplicate","unauthorized","fake"];
-      fraudReports.forEach(r => {
-        let desc = r.description;
-        keywords.forEach(word => {
-          const regex = new RegExp(`\\b(${word})\\b`, "gi");
-          desc = desc.replace(regex, "<span class='highlight'>$1</span>");
-        });
-        list.innerHTML += `<p><strong>${r.customerName}</strong> - ${r.simNumber}: ${desc}</p>`;
-      });
-    }
-    
-    function updateEWasteList() {
-      const list = document.getElementById("ewasteList");
-      list.innerHTML = "<h6>E-Waste Logs:</h6>";
-      eWasteLogs.forEach(e => {
-        list.innerHTML += `<p><strong>${e.customerName}</strong> - ${e.itemsCollected} (Weight: ${e.weight}kg, Reward: R${e.reward})</p>`;
-      });
-    }
-    
-    function updateCourses() {
-      const container = document.getElementById("courseList");
-      container.innerHTML = "";
-      courses.forEach(c => {
-        let completed = distributorCourses.some(dc => dc.distributorId === 1 && dc.courseId === c.id);
-        container.innerHTML += `<li class="list-group-item">${c.name} <button class="btn btn-sm btn-outline-success float-end" ${completed?'disabled':'onclick="completeCourse('+c.id+')"'}>${completed?'Completed':'Complete'}</button></li>`;
-      });
-    }
-    
-    function completeCourse(courseId) {
-      distributorCourses.push({ distributorId: 1, courseId: courseId, completedAt: new Date().toISOString() });
-      distributors[0].badges.push(courses.find(c=>c.id===courseId).name);
-      updateCourses(); updateBadges(); updateLeaderboard();
-    }
-    
-    function updateBadges() {
-      document.getElementById("badgesContainer").innerText = distributors[0].badges.join(", ");
-    }
-    
-    function updateLeaderboard() {
-      const list = document.getElementById("leaderboardList");
-      list.innerHTML = "";
-      distributors.sort((a,b) => (b.fraudCount + b.eWasteCount) - (a.fraudCount + a.eWasteCount));
-      distributors.forEach(d => {
-        list.innerHTML += `<li class="list-group-item">${d.name} - Reports: ${d.fraudCount}, E-Waste: ${d.eWasteCount}, Reward: R${d.totalReward.toFixed(2)}, Badges: ${d.badges.join(", ")}</li>`;
-      });
-    }
-    
-    function updateCommunity() {
-      const list = document.getElementById("chatList");
-      list.innerHTML = "<h6>Community Posts:</h6>";
-      communityPosts.forEach(p => {
-        list.innerHTML += `<p><strong>${p.title}</strong>: ${p.content}</p>`;
-      });
-    }
-    
-    // ===== Event Listeners =====
-    document.getElementById("fraudForm").addEventListener("submit", e=>{
-      e.preventDefault();
-      const customerName = document.getElementById("fraudCustomer").value;
-      const simNumber = document.getElementById("fraudSIM").value;
-      const description = document.getElementById("fraudDesc").value;
+ // ===== Mock Data =====
+let distributors = [
+  { id: 1, name: "Distributor1", fraudCount: 2, eWasteCount: 3, totalReward: 50, badges: ["Fraud Fighter","Eco Champion"] },
+  { id: 2, name: "Distributor2", fraudCount: 1, eWasteCount: 1, totalReward: 10, badges: ["Eco Champion"] }
+];
+
+let fraudReports = [
+  { id: 1, distributorId: 1, customerName: "John Doe", simNumber: "0812345678", description: "SIM card used in scam call" },
+  { id: 2, distributorId: 1, customerName: "Alice Brown", simNumber: "0823456789", description: "Unauthorized duplication of SIM" },
+  { id: 3, distributorId: 2, customerName: "Mark Green", simNumber: "0834567890", description: "Fake SIM registered" }
+];
+
+let eWasteLogs = [
+  { id: 1, distributorId: 1, customerName: "Jane Smith", itemsCollected: "Old SIMs, Phone", weight: 2.5, reward: 25 },
+  { id: 2, distributorId: 1, customerName: "Tom White", itemsCollected: "Old Router", weight: 1.5, reward: 15 },
+  { id: 3, distributorId: 2, customerName: "Linda Grey", itemsCollected: "Old SIMs", weight: 1, reward: 10 }
+];
+
+let courses = [
+  { id: 1, name: "Fraud Prevention" },
+  { id: 2, name: "Customer Service" },
+  { id: 3, name: "Sustainability Practices" }
+];
+
+let distributorCourses = [
+  { distributorId: 1, courseId: 1 },
+  { distributorId: 1, courseId: 3 },
+  { distributorId: 2, courseId: 3 }
+];
+
+let communityPosts = [
+  { id: 1, distributorId: 1, title: "SIM Scam Advice", content: "How to detect duplicate SIM calls" },
+  { id: 2, distributorId: 2, title: "E-Waste Tips", content: "Best way to weigh and track old SIMs" }
+];
+
+// ===== Functions to Update UI =====
+function updateDashboard() {
+  const totalFraudEl = document.getElementById("totalFraud");
+  const totalEWasteEl = document.getElementById("totalEWaste");
+  const totalRewardEl = document.getElementById("totalReward");
+  const totalCommunityEl = document.getElementById("totalCommunity");
+  const totalTrainingEl = document.getElementById("totalTraining");
+
+  if (totalFraudEl) totalFraudEl.innerText = fraudReports.length;
+  if (totalEWasteEl) totalEWasteEl.innerText = eWasteLogs.length;
+  if (totalRewardEl) totalRewardEl.innerText = distributors.reduce((sum, d) => sum + d.totalReward, 0);
+
+  // Community Messages count
+  if (totalCommunityEl) totalCommunityEl.innerText = communityPosts.length;
+
+  // Training Progress count (total courses completed by distributor 1 as example)
+  const completedCourses = distributorCourses.filter(dc => dc.distributorId === 1).length;
+  if (totalTrainingEl) totalTrainingEl.innerText = completedCourses;
+}
+
+
+function logAllData() {
+  // console.group("Distributors"); console.table(distributors); console.groupEnd();
+  // console.group("Fraud Reports"); console.table(fraudReports); console.groupEnd();
+  // console.group("E-Waste Logs"); console.table(eWasteLogs); console.groupEnd();
+  // console.group("Courses"); console.table(courses); console.groupEnd();
+  // console.group("Distributor Courses"); console.table(distributorCourses); console.groupEnd();
+  // console.group("Community Posts"); console.table(communityPosts); console.groupEnd();
+}
+
+// ===== Event Listeners (Optional for Frontend Testing) =====
+document.addEventListener("DOMContentLoaded", ()=>{
+  updateDashboard();
+  logAllData(); // will console all mock data
+
+  // You can add simple test events if your forms exist
+  const fraudForm = document.getElementById("fraudForm");
+  if(fraudForm) fraudForm.addEventListener("submit", e=>{
+    e.preventDefault();
+    const customerName = document.getElementById("fraudCustomer")?.value;
+    const simNumber = document.getElementById("fraudSIM")?.value;
+    const description = document.getElementById("fraudDesc")?.value;
+    if(customerName && simNumber && description){
       const newId = fraudReports.length+1;
-      fraudReports.push({ id:newId, distributorId:1, customerName, simNumber, description, timestamp:new Date().toISOString() });
-      distributors[0].fraudCount++;
-      updateDashboard(); updateFraudList(); updateLeaderboard();
-      e.target.reset();
-    });
-    
-    document.getElementById("ewasteForm").addEventListener("submit", e=>{
-      e.preventDefault();
-      const customerName = document.getElementById("ewasteCustomer").value;
-      const itemsCollected = document.getElementById("ewasteItems").value;
-      const weight = parseFloat(document.getElementById("ewasteWeight").value);
-      const reward = weight * 10;
-      const newId = eWasteLogs.length+1;
-      eWasteLogs.push({ id:newId, distributorId:1, customerName, itemsCollected, weight, reward, timestamp:new Date().toISOString() });
-      distributors[0].eWasteCount++; distributors[0].totalReward += reward;
-      updateDashboard(); updateEWasteList(); updateLeaderboard();
-      e.target.reset();
-    });
-    
-    document.getElementById("chatForm").addEventListener("submit", e=>{
-      e.preventDefault();
-      const title = document.getElementById("chatTitle").value;
-      const content = document.getElementById("chatContent").value;
-      const newId = communityPosts.length+1;
-      communityPosts.push({ id:newId, distributorId:1, title, content, timestamp:new Date().toISOString() });
-      updateCommunity(); e.target.reset();
-    });
-    
-    // ===== Initial Load =====
-    updateDashboard(); updateFraudList(); updateEWasteList(); updateCourses(); updateBadges(); updateLeaderboard(); updateCommunity();
-    </script>
+      fraudReports.push({ id:newId, distributorId:1, customerName, simNumber, description });
+      updateDashboard();
+      logAllData();
+      fraudForm.reset();
+    }
+  });
+});
+
+</script>
 </body>
 
 
